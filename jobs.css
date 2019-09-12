@@ -1,3 +1,7 @@
+html {
+    font-size: 62.5%;
+}
+
 .hero-job {
     /* Sizing */
     width: 100vw;
@@ -13,7 +17,7 @@
     /* Background styles */
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('cupcakeIpsum.jpg');
     background-size: cover;
-    background-position: center ;
+    background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }

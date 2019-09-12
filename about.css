@@ -1,37 +1,67 @@
+html {
+    font-size: 62.5%;
+}
+
 body {
     overflow-x: hidden;
-    background-color: rgb(230, 230, 230)
+    background-color: rgb(230, 230, 230);
+}
+
+.hero-about {
+    /* Sizing */
+    width: 100vw;
+    height: 50vh;
+    /* Flexbox stuff */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Text styles */
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    /* Background styles */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1468235786671-7d0c7b22c605?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.heroaboutinner h1 {
+    color: rgb(255, 174, 0)
 }
 
 .parent {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 10px;
-    grid-row-gap: 1px;
-    
+    grid-column-gap: 1rem;
+    grid-row-gap: 0.1rem;
     grid-template-areas: "a a a" "b b c" ". d d" "e f f" "g g ." "h h i" ". j j";
     overflow-x: hidden;
 }
 
 .margin {
-    margin: 20px;
-    font-size: 22px;
+    margin: 2rem;
+    font-size: 2.2rem;
 }
-@media only screen and (max-width: 1000px) {.parent {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 10px;
-    grid-row-gap: 1px;
-    
-    grid-template-areas: "a a a" "b b c" "d d d" "e f f" "g g g" "h h i" "j j j";
-    overflow-x: hidden;
-}}
 
-@media only screen and (max-width: 750px) {.parent {
-    display: flex;
-    flex-direction: column;
-}}
+@media only screen and (max-width: 1500px) {
+    .parent {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 1rem;
+        grid-row-gap: 0.1 rem;
+        grid-template-areas: "a a a" "b b c" "d d d" "e f f" "g g g" "h h i" "j j j";
+        overflow-x: hidden;
+    }
+}
 
+@media only screen and (max-width: 1500px) {
+    .parent {
+        display: flex;
+        flex-direction: column;
+    }
+}
 
 .div1 {
     grid-area: a;
@@ -40,56 +70,50 @@ body {
     font-weight: 700;
     text-decoration: underline;
     text-decoration-color: rgb(0, 0, 255);
-    font-size: 30px;
+    font-size: 3rem;
 }
 
 .div2 {
     grid-area: b;
 }
-.div2 > h2 {
+
+.div2>h2 {
     text-align: center;
     color: rgb(67, 67, 230);
     text-decoration: underline;
     text-decoration-color: rgb(235, 153, 1);
-    font-size: 40px;
+    font-size: 4rem;
 }
 
 .div3 {
     grid-area: c;
-    overflow: hidden;  
-    
+    overflow: hidden;
 }
 
 .div4 {
     grid-area: d;
-    
-    display:flex; 
+    display: flex;
     justify-content: flex-end;
-    
-    
-              
 }
 
-.div4 > p {
-    
+.div4>p {
     max-width: 600px;
     align-self: center;
-    margin-right:-20px;
+    margin-right: -20px;
     background: rgb(123, 185, 255);
-    padding:20px;
-    font-size: 25px;
-}
-.img2 {
- height: 120px;
- width: 120px;
- margin:auto;
-    
+    padding: 2rem;
+    font-size: 2.5rem;
 }
 
-.box { 
-    align-self: center;  
-        
-    }
+.img2 {
+    height: 120px;
+    width: 120px;
+    margin: auto;
+}
+
+.box {
+    align-self: center;
+}
 
 .div5 {
     grid-area: e;
@@ -98,97 +122,93 @@ body {
 
 .div6 {
     grid-area: f;
-    
 }
-.div6 > h2 {
+
+.div6>h2 {
     text-align: center;
     color: rgb(67, 67, 230);
     text-decoration: underline;
     text-decoration-color: rgb(235, 153, 1);
-    font-size: 40px;
+    font-size: 4rem;
 }
+
 .div7 {
     grid-area: g;
-        display:flex; 
+    display: flex;
     justify-content: flex-start;
 }
 
-.div7 > p {
-    
+.div7>p {
     max-width: 600px;
     align-self: center;
-    margin-left:-30px;
+    margin-left: -30px;
     background: rgb(123, 185, 255);
-    padding:20px;
-    font-size: 25px;
-    
+    padding: 2rem;
+    font-size: 2.5rem;
 }
-
-
 
 .img1 {
-    max-height: 100%;
-    
-    display:block;
-    margin:auto;
-}
-@media only screen and (max-width: 1180px) {.img1 {
     max-height: 80%;
-    
-    display:block;
-    margin:auto;
-}}
-@media only screen and (max-width: 990px) {.img1 {
-    max-height: 300px;
-    max-width: 300px;
-    flex:1;
-    
-    display:flex;
-    margin:auto;
+    display: block;
+    margin: auto;
 }
-.div3 {
-    display: flex;
-    flex-direction: row;
-}
-}
-@media screen and (min-width: 750px){
-    #hideme{
-        visibility: hidden;  
+
+@media only screen and (max-width: 1850px) {
+    .img1 {
+        max-height: 60%;
+        display: block;
+        margin: auto;
     }
 }
+
+@media only screen and (max-width: 1500px) {
+    .img1 {
+        max-height: 300px;
+        max-width: 300px;
+        flex: 1;
+        display: flex;
+        margin: auto;
+    }
+    .div3 {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    #hideme {
+        visibility: hidden;
+    }
+}
+
 .div8 {
     grid-area: h
 }
 
-.div8 > h2 {
+.div8>h2 {
     text-align: center;
     color: rgb(67, 67, 230);
     text-decoration: underline;
     text-decoration-color: rgb(235, 153, 1);
-    font-size: 40px;
+    font-size: 4rem;
 }
 
 .div9 {
     grid-area: i;
-    overflow: hidden;  
-    
-}
-.div10 {
-    grid-area: j;
-    
-    display:flex; 
-    justify-content: flex-end;
-    
-    
-              
+    overflow: hidden;
 }
 
-.div10 > p {
-    
+.div10 {
+    grid-area: j;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.div10>p {
     max-width: 600px;
     align-self: center;
-    margin-right:-20px;
+    margin-right: -20px;
     background: rgb(123, 185, 255);
-    padding:20px;
-    font-size: 25px;
+    padding: 2rem;
+    font-size: 2.5rem;
 }
